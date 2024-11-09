@@ -31,7 +31,7 @@ class LoginPage{
     
     navigateToLogin(){
         const url = Cypress.env("url"); 
-        cy.visit(url+'/ghost/#/signin');
+        cy.visit(url+'ghost/#/signin');
     }
 }
 
