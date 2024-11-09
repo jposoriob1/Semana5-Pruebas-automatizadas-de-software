@@ -16,8 +16,8 @@ class GivenSteps {
         LoginPage.login()
     }
 
-    giveNNavigateToPagesPage(){
-        PagesPage.navigateToPagesPage();
+    giveNavigateToPagesPage(){
+        DashboardPage.clickPagesLink();
     }
 }
 

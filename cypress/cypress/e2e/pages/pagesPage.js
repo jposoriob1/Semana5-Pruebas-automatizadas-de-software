@@ -3,20 +3,21 @@ class PagesPage {
         return cy.get('[data-test-new-page-button]');
     }
 
-    get publishButton() {
-        return cy.get('[data-test-button="publish-flow"]');
+    get publishBtn() {
+        // return cy.get('');
+        return cy.contains('button', 'Publish')
     }
 
-    get confirmPublishButton() {
+    get confirmPublishBtn() {
         return cy.get('[data-test-button="confirm-publish"]');
     }
 
-    get finalReviewButton() {
+    get finalReviewBtn() {
         return cy.get('[data-test-button="continue"]');
     }
 
     get pageDescription() {
-        return cy.get('div.kg-prose[contenteditable="true"]');
+        return cy.get('div.kg-prose').first();
     }
 
     fillPageDescription(description) {
@@ -24,20 +25,20 @@ class PagesPage {
         this.pageDescription.type(description);
     }
 
-    newPageBtnClick_Click() {
+    newPageBtn_Click() {
         this.newPageBtn.click();
     }
 
     publishButton_Click() {
-        this.publishButton.click();
+        this.publishBtn.click();
     }
 
     finalReviewButton_Click() {
-        this.finalReviewButton.click();
+        this.finalReviewBtn.click();
     }
 
     confirmPublishButton_Click() {
-        this.confirmPublishButton.click();
+        this.confirmPublishBtn.click();
     }
 
     isPublishFlowComplete() {
@@ -57,3 +58,5 @@ class PagesPage {
         cy.visit(url+'/ghost/#/pages');
     }
 }
+
+export default new PagesPage();
