@@ -24,10 +24,9 @@ class MemberPage {
         //this.saveButton.click();
     }
 
-    addEmptyMember() {
+    clickNewMember() {
         cy.wait(1000);
         this.newMemberButton.click();
-        this.saveButton.click();
     }
 }
 
