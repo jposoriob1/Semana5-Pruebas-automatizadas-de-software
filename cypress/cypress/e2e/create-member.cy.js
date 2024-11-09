@@ -2,8 +2,19 @@ import { faker } from "@faker-js/faker";
 import loginPage from "./pages/loginPage";
 import memberPage from "./pages/memberPage";
 import dashboardPage from "./pages/dashboardPage";
+import GivenSteps from "./steps/givenSteps";
 
 describe("Create Members", () => {
+
+  beforeEach(() => {
+    // Given the User navigates to the login page
+    GivenSteps.givenNavigateToLoginPage();
+    // and enters a valid username and password and click the login button
+    GivenSteps.givenLogin();
+    // and navigates to the Members
+    GivenSteps.givenNavigateToMembersPage();
+  })
+  
   it("E11- ", () => {
     // Visits the login page
     cy.visit('http://localhost:3001/ghost/#/signin');

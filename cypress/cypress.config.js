@@ -9,5 +9,6 @@ module.exports = defineConfig({
   env: {
     'username': 'c.bayona@uniandes.edu.co',
     'password': 'miau1234567890',
+    'url': 'http://localhost:3001/',
   }
 });

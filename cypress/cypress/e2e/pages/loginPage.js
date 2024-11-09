@@ -30,7 +30,8 @@ class LoginPage{
     }
     
     navigateToLogin(){
-        cy.visit('http://localhost:3001/ghost/#/signin');
+        const url = Cypress.env("url"); 
+        cy.visit(url+'/ghost/#/signin');
     }
 }
 

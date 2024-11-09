@@ -13,8 +13,6 @@ class GivenSteps {
     givenLogin() {
         LoginPage.login()
     }
-
-
 }
 
 export default new GivenSteps();

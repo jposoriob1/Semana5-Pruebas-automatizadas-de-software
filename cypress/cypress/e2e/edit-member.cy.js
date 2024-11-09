@@ -17,8 +17,6 @@ describe('Edit Member', () => {
     })
 
     it("E13 - Edit Member with valid values", () => {
-        // Clicks on the members link
-        dashboardPage.clickMembersLink();
         // Adds a member
         memberPage.addEmptyMember();
         // Asserts that the email field is required
