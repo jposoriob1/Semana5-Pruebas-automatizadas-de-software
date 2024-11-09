@@ -17,7 +17,7 @@ describe("Create Members", () => {
     GivenSteps.givenNavigateToMembersPage();
   })
   
-  it("E11- Create member with valid values", () => {
+  it("E11 - Create member with valid values", () => {
     // When the user clicks on New Member
     WhenSteps.whenClicksNewMember();
     // and fills the name input
@@ -32,9 +32,27 @@ describe("Create Members", () => {
     ThenSteps.thenSeeCreatedMember()
   });
 
-  /*it("E12- ", () => {
+  it("E12 - Create member with empty values", () => {
+    // When the user clicks on New Member
+    WhenSteps.whenClicksNewMember();
+    // and submits the form without filling any values
+    WhenSteps.whenSubmitNewMember()
+    // Then the user should see 'The email is required'
+    ThenSteps.thenSeeEmailRequiredMemberForm()
   });
 
-  it("E15- ", () => {
-  });*/
+  it("E15 - Create member with invalid values", () => {
+    // When the user clicks on New Member
+    WhenSteps.whenClicksNewMember();
+    // and fills the name input with an invalid value
+    WhenSteps.whenFillNameInvalid();
+    // and fills the email input with an invalid value
+    WhenSteps.whenFillEmailInvalid();
+    // and fills the note TextArea with an invalid value
+    WhenSteps.whenFillNoteInvalid()
+    // and submits the form 
+    WhenSteps.whenSubmitNewMember()
+    // Then the user should see 'The email is required' and 'Note is too long.'
+    ThenSteps.thenSeeInvalidEmailNote()
+  });
 });

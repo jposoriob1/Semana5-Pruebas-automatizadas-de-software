@@ -5,6 +5,12 @@ class ThenSteps {
     thenSeeCreatedMember(){
         MemberPage.seeCreatedMember();
     }
+    thenSeeEmailRequiredMemberForm(){
+        MemberPage.seeEmailRequired();
+    }
+    thenSeeInvalidEmailNote(){
+        MemberPage.seeInvalidEmailNote();
+    }
 
 }
 

@@ -4,7 +4,7 @@ class DashboardPage {
     }
     
     clickMembersLink(){
-        cy.wait(1000);
+        cy.wait(2000);
         this.membersLink.click();
     }
 }

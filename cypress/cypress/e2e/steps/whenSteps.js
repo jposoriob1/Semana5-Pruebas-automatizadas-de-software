@@ -16,10 +16,20 @@ class WhenSteps {
     whenSubmitNewMember(){
         MemberPage.submitNewMember()
     }
+
+    whenFillNameInvalid(){
+        MemberPage.fillNameInputInvalid()
+    }
+
+    whenFillEmailInvalid(){
+        MemberPage.fillEmailInputInvalid()
+    }
     whenFillNote(){
         MemberPage.fillNoteTextArea()
     }
-    
+    whenFillNoteInvalid(){
+        MemberPage.fillNoteTextAreaInvalid()
+    }
 
 }
 

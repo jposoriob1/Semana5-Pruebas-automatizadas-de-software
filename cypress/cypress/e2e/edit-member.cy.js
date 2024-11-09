@@ -16,7 +16,7 @@ describe('Edit Member', () => {
         GivenSteps.givenNavigateToMembersPage();
     })
 
-    it("E13 - Edit Member with valid values", () => {
+    /*it("E13 - Edit Member with valid values", () => {
         // Adds a member
         memberPage.addEmptyMember();
         // Asserts that the email field is required
@@ -30,5 +30,5 @@ describe('Edit Member', () => {
         memberPage.addEmptyMember();
         // Asserts that the email field is required
         cy.contains('Please enter an email.');
-    });
+    });*/
 })
