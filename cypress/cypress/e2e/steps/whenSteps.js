@@ -5,6 +5,17 @@ class WhenSteps {
     whenClicksNewMember(){
         MemberPage.clickNewMember();
     }
+    
+    whenFillName(){
+        MemberPage.fillNameInput()
+    }
+    
+    whenFillEmail(){
+        MemberPage.fillEmailInput()
+    }
+    whenSubmitNewMember(){
+        MemberPage.submitNewMember()
+    }
 
 }
 

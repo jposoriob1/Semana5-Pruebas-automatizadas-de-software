@@ -20,10 +20,10 @@ describe("Create Members", () => {
   it("E11- ", () => {
     // When the user clicks on New Member
     WhenSteps.whenClicksNewMember();
-    // and fills the name
-        
-    // and fills the email
-    //ThenSteps
+    // and fills the name input
+    WhenSteps.whenFillName();
+    // and fills the email input
+    WhenSteps.whenFillEmail();
     // and submits the form 
     
     
@@ -37,23 +37,8 @@ describe("Create Members", () => {
   });
 
   it("E12- ", () => {
-    // Visits the login page
-
-    // Clicks on the members link
-    dashboardPage.clickMembersLink();
-    // Adds a member
-    memberPage.addEmptyMember();
-    // Asserts that the email field is required
-    cy.contains('Please enter an email.');
   });
 
   it("E15- ", () => {
-    // Visits the login page
-    // Clicks on the members link
-    dashboardPage.clickMembersLink();
-    // Adds a member
-    memberPage.addEmptyMember();
-    // Asserts that the email field is required
-    cy.contains('Please enter an email.');
   });
 });

@@ -1,3 +1,5 @@
+import {faker} from "@faker-js/faker";
+
 class MemberPage {
 
     get newMemberButton() {
@@ -26,6 +28,18 @@ class MemberPage {
 
     clickNewMember() {
         cy.wait(1000);
+        this.newMemberButton.click();
+    }
+    
+    fillNameInput() {
+        this.memberNameInput.clear().type(faker.internet.displayName());
+    }
+    
+    fillEmailInput() {
+        this.memberEmailInput.clear().type(faker.internet.email());
+    }
+    
+    submitNewMember() {
         this.newMemberButton.click();
     }
 }
