@@ -17,28 +17,42 @@ describe("Create Members", () => {
     GivenSteps.givenNavigateToMembersPage();
   })
   
-  it("E11- ", () => {
+  it("E11 - Create member with valid values", () => {
     // When the user clicks on New Member
     WhenSteps.whenClicksNewMember();
     // and fills the name input
-    WhenSteps.whenFillName();
+    WhenSteps.whenFillNameMember();
     // and fills the email input
-    WhenSteps.whenFillEmail();
+    WhenSteps.whenFillEmailMember();
+    // and fills the note TextArea
+    WhenSteps.whenFillNoteMember()
     // and submits the form 
-    
-    
-    
-    /* Clicks on the members link
-    dashboardPage.clickMembersLink();
-    // Adds a member
-    memberPage.addEmptyMember();
-    // Asserts that the email field is required
-    cy.contains('Please enter an email.');*/
+    WhenSteps.whenClickSaveMember()
+    // Then the user should see the member created
+    ThenSteps.thenSeeCreatedMember()
   });
 
-  it("E12- ", () => {
+  it("E12 - Create member with empty values", () => {
+    // When the user clicks on New Member
+    WhenSteps.whenClicksNewMember();
+    // and submits the form without filling any values
+    WhenSteps.whenClickSaveMember()
+    // Then the user should see 'The email is required'
+    ThenSteps.thenSeeEmailRequiredMemberForm()
   });
 
-  it("E15- ", () => {
+  it("E15 - Create member with invalid values", () => {
+    // When the user clicks on New Member
+    WhenSteps.whenClicksNewMember();
+    // and fills the name input with an invalid value
+    WhenSteps.whenFillNameInvalidMemberForm();
+    // and fills the email input with an invalid value
+    WhenSteps.whenFillEmailInvalidMemberForm();
+    // and fills the note TextArea with an invalid value
+    WhenSteps.whenFillNoteInvalid()
+    // and submits the form 
+    WhenSteps.whenClickSaveMember()
+    // Then the user should see 'The email is required' and 'Note is too long.'
+    ThenSteps.thenSeeInvalidEmailNote()
   });
 });
