@@ -2,7 +2,9 @@
 import MemberPage from "../pages/memberPage";
 
 class ThenSteps {
-    
+    thenSeeCreatedMember(){
+        MemberPage.seeCreatedMember();
+    }
 
 }
 

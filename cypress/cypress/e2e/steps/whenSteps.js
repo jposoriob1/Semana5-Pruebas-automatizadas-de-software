@@ -16,6 +16,10 @@ class WhenSteps {
     whenSubmitNewMember(){
         MemberPage.submitNewMember()
     }
+    whenFillNote(){
+        MemberPage.fillNoteTextArea()
+    }
+    
 
 }
 

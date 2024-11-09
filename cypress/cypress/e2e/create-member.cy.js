@@ -17,28 +17,24 @@ describe("Create Members", () => {
     GivenSteps.givenNavigateToMembersPage();
   })
   
-  it("E11- ", () => {
+  it("E11- Create member with valid values", () => {
     // When the user clicks on New Member
     WhenSteps.whenClicksNewMember();
     // and fills the name input
     WhenSteps.whenFillName();
     // and fills the email input
     WhenSteps.whenFillEmail();
+    // and fills the note TextArea
+    WhenSteps.whenFillNote()
     // and submits the form 
-    
-    
-    
-    /* Clicks on the members link
-    dashboardPage.clickMembersLink();
-    // Adds a member
-    memberPage.addEmptyMember();
-    // Asserts that the email field is required
-    cy.contains('Please enter an email.');*/
+    WhenSteps.whenSubmitNewMember()
+    // Then the user should see the member created
+    ThenSteps.thenSeeCreatedMember()
   });
 
-  it("E12- ", () => {
+  /*it("E12- ", () => {
   });
 
   it("E15- ", () => {
-  });
+  });*/
 });
