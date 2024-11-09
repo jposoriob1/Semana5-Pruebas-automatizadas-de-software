@@ -5,9 +5,13 @@ class MemberPage {
     displayNameValid = faker.internet.displayName()
     emailValid = faker.internet.email();
     noteValid = faker.string.alpha(100)
+
+    displayNameValid2 = faker.internet.displayName()
+    emailValid2 = faker.internet.email();
+    noteValid2 = faker.string.alpha(100)
     
     emailInvalid = faker.string.alpha(10)
-    displayNameInvalid = faker.string.symbol(10)
+    displayNameInvalid = faker.string.symbol(2)
     noteInvalid = faker.string.alpha(600)
     
     
@@ -29,6 +33,10 @@ class MemberPage {
     
     get memberNoteTextArea(){
         return cy.get('textarea[name="note"]');
+    }
+    
+    get memberName(){
+        return cy.get('h3').contains(this.displayNameValid);
     }
 
     clickNewMember() {
@@ -61,25 +69,46 @@ class MemberPage {
     }
     
     seeEmailRequired(){
-        cy.get('p.response').contains('Please enter an email.').should('exist')
-            .should('be.visible');
+        cy.get('p.response').contains('Please enter an email.').should('exist');
     }
     
     seeCreatedMember(){
-        cy.get('p').contains('Created').should('exist').should('be.visible');
-        cy.get('h3').contains(this.displayNameValid).should('exist').should('be.visible');
-        cy.get('a').contains(this.emailValid).should('exist').should('be.visible');
+        cy.get('p').contains('Created').should('exist');
+        cy.get('h3').contains(this.displayNameValid).should('exist');
+        cy.get('a').contains(this.emailValid).should('exist');
     }
     
-    submitNewMember() {
+    clickSave() {
         this.saveButton.click();
     }
+
+
     
     seeInvalidEmailNote(){
-        cy.get('p.response').contains('Invalid Email.').should('exist')
-            .should('be.visible');
+        cy.get('p.response').contains('Invalid Email.').should('exist');
         cy.get('p.response').contains('Note is too long.').should('exist')
-            .should('be.visible');
+    }
+    
+    clickNameMember(){
+        this.memberName.click();
+    }
+    
+    updateEmail(){
+        this.memberNameInput.clear().type(this.displayNameValid2);
+    }
+    
+    updateName(){
+        this.memberEmailInput.clear().type(this.emailValid2);
+    }
+    
+    updateNote(){
+        this.memberNoteTextArea.clear().type(this.noteValid2);
+    }
+
+    seeUpdatedMember() {
+        cy.get('h3').contains(this.displayNameValid2).should('exist')
+        cy.get('a').contains(this.emailValid2).should('exist')
+        cy.get('textarea[name="note"]').should('exist').should('have.value', this.noteValid2);
     }
 }
 

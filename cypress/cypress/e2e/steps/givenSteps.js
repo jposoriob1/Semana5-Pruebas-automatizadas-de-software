@@ -13,6 +13,14 @@ class GivenSteps {
     givenLogin() {
         LoginPage.login()
     }
+    givenCreateNewMember(){
+        MemberPage.clickNewMember()
+        MemberPage.fillNameInput()
+        MemberPage.fillEmailInput()
+        MemberPage.fillNoteTextArea()
+        MemberPage.clickSave();
+        DashboardPage.clickMembersLink();
+    }
 }
 
 export default new GivenSteps();

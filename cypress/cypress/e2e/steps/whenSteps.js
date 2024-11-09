@@ -6,29 +6,42 @@ class WhenSteps {
         MemberPage.clickNewMember();
     }
     
-    whenFillName(){
+    whenFillNameMember(){
         MemberPage.fillNameInput()
     }
     
-    whenFillEmail(){
+    whenFillEmailMember(){
         MemberPage.fillEmailInput()
     }
-    whenSubmitNewMember(){
-        MemberPage.submitNewMember()
+    whenClickSaveMember(){
+        MemberPage.clickSave()
     }
 
-    whenFillNameInvalid(){
+    whenFillNameInvalidMemberForm(){
         MemberPage.fillNameInputInvalid()
     }
 
-    whenFillEmailInvalid(){
+    whenFillEmailInvalidMemberForm(){
         MemberPage.fillEmailInputInvalid()
     }
-    whenFillNote(){
+    whenFillNoteMember(){
         MemberPage.fillNoteTextArea()
     }
     whenFillNoteInvalid(){
         MemberPage.fillNoteTextAreaInvalid()
+    }
+
+    whenClickMemberName(){
+        MemberPage.clickNameMember();
+    }
+    whenUpdateMemberName(){
+        MemberPage.updateName()
+    }
+    whenUpdateMemberEmail(){
+        MemberPage.updateEmail()
+    }
+    whenUpdateMemberNote(){
+        MemberPage.updateNote()
     }
 
 }

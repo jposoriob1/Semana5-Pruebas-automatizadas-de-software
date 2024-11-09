@@ -21,13 +21,13 @@ describe("Create Members", () => {
     // When the user clicks on New Member
     WhenSteps.whenClicksNewMember();
     // and fills the name input
-    WhenSteps.whenFillName();
+    WhenSteps.whenFillNameMember();
     // and fills the email input
-    WhenSteps.whenFillEmail();
+    WhenSteps.whenFillEmailMember();
     // and fills the note TextArea
-    WhenSteps.whenFillNote()
+    WhenSteps.whenFillNoteMember()
     // and submits the form 
-    WhenSteps.whenSubmitNewMember()
+    WhenSteps.whenClickSaveMember()
     // Then the user should see the member created
     ThenSteps.thenSeeCreatedMember()
   });
@@ -36,7 +36,7 @@ describe("Create Members", () => {
     // When the user clicks on New Member
     WhenSteps.whenClicksNewMember();
     // and submits the form without filling any values
-    WhenSteps.whenSubmitNewMember()
+    WhenSteps.whenClickSaveMember()
     // Then the user should see 'The email is required'
     ThenSteps.thenSeeEmailRequiredMemberForm()
   });
@@ -45,13 +45,13 @@ describe("Create Members", () => {
     // When the user clicks on New Member
     WhenSteps.whenClicksNewMember();
     // and fills the name input with an invalid value
-    WhenSteps.whenFillNameInvalid();
+    WhenSteps.whenFillNameInvalidMemberForm();
     // and fills the email input with an invalid value
-    WhenSteps.whenFillEmailInvalid();
+    WhenSteps.whenFillEmailInvalidMemberForm();
     // and fills the note TextArea with an invalid value
     WhenSteps.whenFillNoteInvalid()
     // and submits the form 
-    WhenSteps.whenSubmitNewMember()
+    WhenSteps.whenClickSaveMember()
     // Then the user should see 'The email is required' and 'Note is too long.'
     ThenSteps.thenSeeInvalidEmailNote()
   });

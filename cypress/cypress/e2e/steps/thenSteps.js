@@ -11,6 +11,9 @@ class ThenSteps {
     thenSeeInvalidEmailNote(){
         MemberPage.seeInvalidEmailNote();
     }
+    thenSeeUpdatedMember(){
+        MemberPage.seeUpdatedMember();
+    }
 
 }
 
