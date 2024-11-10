@@ -4,3 +4,4 @@ Feature: Edit Member
     Given the user navigates to Ghost at "<GHOST>"
     And the user logs in using the credentials "<USERNAME>" and "<PASSWORD>"
     And the user navigates to the members page
+    And I wait for 5 seconds
