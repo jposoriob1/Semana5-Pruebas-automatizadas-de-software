@@ -11,9 +11,7 @@ Given('the user navigates to the members page', async function () {
 
 // When
 
-When('the user clicks on the {string} link', async function (link) {
-    await this.driver.$(`span=${link}`).click();
-});
+
 
 
 When('the user fill the name {kraken-string}', async function (name) {
@@ -27,9 +25,7 @@ When('the user fill the email {kraken-string}', async function (email) {
 When('the user fill the note {kraken-string}', async function (note) {
     await MembersPage.fillNote(this,note);
 });
-When('the user clicks on the {string} button', async function (button) {
-    await this.driver.$(`button=${button}`).click();
-});
+
 
 When('the user clicks on a member name {kraken-string}', async function (name) {
     await MembersPage.clickOnMemberName(this,name);

@@ -11,3 +11,11 @@ Given('the user logs in using the credentials {kraken-string} and {kraken-string
     await LoginPage.enterPassword(this, password);
     await LoginPage.clickOnSubmit(this);
 });
+
+When('the user clicks on the {string} link', async function (link) {
+    await this.driver.$(`span=${link}`).click();
+});
+
+When('the user clicks on the {string} button', async function (button) {
+    await this.driver.$(`button=${button}`).click();
+});

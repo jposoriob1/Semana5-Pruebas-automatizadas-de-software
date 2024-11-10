@@ -9,13 +9,6 @@ Given('the user navigates to the pages page', async function () {
 });
 
 // When
-When('the user clicks on the {string} link', async function (link) {
-    await this.driver.$(`span=${link}`).click();
-});
-
-When('the user fills the title {kraken-string}', async function (title) {
-    await PagesPage.fillTitle(this, title);
-});
 
 When('the user fills the content {kraken-string}', async function (content) {
     await PagesPage.fillContent(this, content);
@@ -25,15 +18,8 @@ When('the user adds an image', async function () {
     await PagesPage.addImage(this);
 });
 
-When('the user clicks on the {string} button', async function (button) {
-    await this.driver.$(`button=${button}`).click();
-});
 
 // Then
-Then('the user should see the created page title {kraken-string}', async function (title) {
-    const renderedTitle = await this.driver.$(`h1=${title}`).getText();
-    return assert.equal(renderedTitle, title);
-});
 
 Then('the user should see the created page description {kraken-string}', async function (content) {
     const renderedContent = await this.driver.$(`div=${content}`).getText();
