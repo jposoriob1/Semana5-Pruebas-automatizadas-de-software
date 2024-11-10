@@ -2,7 +2,7 @@ import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
 
-describe("Create Page With Only Description", () => {
+describe("Pages - Create Page With Only Description", () => {
 
     beforeEach(() => {
         // Given the User navigates to the login page
@@ -13,7 +13,7 @@ describe("Create Page With Only Description", () => {
         GivenSteps.giveNavigateToPagesPage();
     });
 
-    it('should create a new page successfully with a random description', () => {
+    it('E18 - Should create a new page successfully with a random description', () => {
         const randomPageDescription = faker.lorem.paragraph();
 
         // When

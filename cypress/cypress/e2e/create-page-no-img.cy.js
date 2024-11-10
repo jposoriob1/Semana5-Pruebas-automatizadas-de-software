@@ -2,7 +2,7 @@ import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
 
-describe("Create Page without img", () => {
+describe("Pages - Create Page without img", () => {
 
     beforeEach(() => {
         // Given the User navigates to the login page
@@ -13,7 +13,7 @@ describe("Create Page without img", () => {
         GivenSteps.giveNavigateToPagesPage();
     });
 
-    it('should create a new page successfully with a random title and description', () => {
+    it('E16 - Should create a new page successfully with a random title and description', () => {
         const randomPageDescription = faker.lorem.paragraph();
         const randomPageTitle = faker.lorem.sentence({min: 3, max: 5});
 

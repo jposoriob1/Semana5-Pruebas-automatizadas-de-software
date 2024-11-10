@@ -7,8 +7,8 @@ module.exports = defineConfig({
     },
   },
   env: {
-    'username': 'Carlitos.Bayona@playboy.com',
-    'password': 'miaumiauGRRRR',
+    'username': 'camila@GIT_DESTROYER.com',
+    'password': 'YOUR_COMMITS_SHALL_NOT_PASS.',
     'url': 'http://localhost:3001/',
   }
 });

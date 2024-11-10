@@ -2,7 +2,7 @@ import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
 
-describe("Create a complete valid Page", () => {
+describe("Pages - Create a complete valid Page", () => {
 
     beforeEach(() => {
         // Given the User navigates to the login page
@@ -13,7 +13,7 @@ describe("Create a complete valid Page", () => {
         GivenSteps.giveNavigateToPagesPage();
     });
 
-    it('should create a new page successfully with a random description', () => {
+    it('E19 - Should create a new page successfully with a random description', () => {
         const randomPageDescription = faker.lorem.paragraph();
         const randomPageTitle = faker.lorem.sentence({min: 3, max: 5});
 

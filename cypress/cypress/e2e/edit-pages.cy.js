@@ -2,7 +2,7 @@ import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
 
-describe("Edit page title and description", () => {
+describe("Pages - Edit page title and description", () => {
 
     beforeEach(() => {
         // Given the User navigates to the login page
@@ -16,7 +16,7 @@ describe("Edit page title and description", () => {
 
     });
 
-    it('should edit a page', () => {
+    it('E17 - Should edit a page', () => {
         const randomPageDescription = faker.lorem.paragraph();
         const randomPageTitle = faker.lorem.sentence({min: 3, max: 5});
         // When
