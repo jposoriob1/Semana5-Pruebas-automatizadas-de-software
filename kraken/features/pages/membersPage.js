@@ -1,17 +1,15 @@
 class MembersPage{
-    constructor(driver){
-        this.driver = driver;
-    }
 
-    async fillName(name){
-        await this.driver.$('input[name="name"]').setValue(name);
+
+    async fillName(ctx, name){
+        await ctx.driver.$('input[name="name"]').setValue(name);
     }
-    async fillEmail(email){
-        await this.driver.$('input[name="email"]').setValue(email);
+    async fillEmail(ctx, email){
+        await ctx.driver.$('input[name="email"]').setValue(email);
     }
-    async fillNote(note){
-        await this.driver.$('textarea[name="note"]').setValue(note);
+    async fillNote(ctx, note){
+        await ctx.driver.$('textarea[name="note"]').setValue(note);
     }
 }
 
-module.exports = MembersPage;
+module.exports = new MembersPage();
