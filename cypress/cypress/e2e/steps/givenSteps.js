@@ -21,6 +21,9 @@ class GivenSteps {
         MemberPage.clickSave();
         DashboardPage.clickMembersLink();
     }
+    givenNavigateToTagPage(){
+        DashboardPage.clickTagLink();
+    }
 }
 
 export default new GivenSteps();

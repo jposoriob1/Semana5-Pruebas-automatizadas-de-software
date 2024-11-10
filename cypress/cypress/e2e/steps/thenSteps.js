@@ -1,5 +1,6 @@
 ﻿import LoginPage from "../pages/loginPage";
 import MemberPage from "../pages/memberPage";
+import tagPage from "../pages/tagPage";
 
 class ThenSteps {
     thenSeeCreatedMember(){
@@ -13,6 +14,9 @@ class ThenSteps {
     }
     thenSeeUpdatedMember(){
         MemberPage.seeUpdatedMember();
+    }
+    thenSeeTagPage(){
+        tagPage.seeTags();
     }
 
 }
