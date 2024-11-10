@@ -31,6 +31,10 @@ When('the user clicks on the {string} button', async function (button) {
     await this.driver.$(`button=${button}`).click();
 });
 
+When('the user clicks on a member name {kraken-string}', async function (name) {
+    await MembersPage.clickOnMemberName(this,name);
+})
+
 // Then
 
 Then('the user should see the created member name {kraken-string}', async function (name) {
