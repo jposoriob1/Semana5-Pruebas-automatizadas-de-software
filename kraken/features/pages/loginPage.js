@@ -1,17 +1,14 @@
 class LoginPage{
-    constructor(driver){
-        this.driver = driver;
-    }
 
-    async enterUserName(username){
-        await this.driver.$('input[name="identification"]').setValue(username);
+    async enterUserName(ctx, username){
+        await ctx.driver.$('input[name="identification"]').setValue(username);
     }
-    async enterPassword(password){
-        await this.driver.$('input[name="password"]').setValue(password);
+    async enterPassword(ctx, password){
+        await ctx.driver.$('input[name="password"]').setValue(password);
     }
-    async clickOnSubmit(){
-        await this.driver.$('button[type="submit"]').click();
+    async clickOnSubmit(ctx){
+        await ctx.driver.$('button[type="submit"]').click();
     }
 }
 
-module.exports = LoginPage;
+module.exports = new LoginPage();

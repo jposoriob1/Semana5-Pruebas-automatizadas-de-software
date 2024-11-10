@@ -1,11 +1,8 @@
 class DashboardPage{
-    constructor(driver){
-        this.driver = driver;
-    }
 
-    async navigateToMembers(){
-        await this.driver.$('li>a[href="#/members/"]').click();
+    async navigateToMembers(ctx){
+        await ctx.driver.$('li>a[href="#/members/"]').click();
     }
 }
 
-module.exports = DashboardPage;
+module.exports = new DashboardPage();
