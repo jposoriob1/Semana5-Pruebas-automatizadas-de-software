@@ -15,5 +15,5 @@ Scenario: Crear tag con datos validos
   And I wait for 1 seconds
 
   Then I click again tags
-  And I wait for 1 seconds
+  And I wait for 2 seconds
 
