@@ -7,6 +7,14 @@ class PagesPage {
         return cy.contains('button', 'Publish')
     }
 
+    get addImageBtn() {
+        return cy.get('svg[viewBox="0 0 122.43 122.41"]');
+    }
+
+    get addImageBtn_FirstPic() {
+        return cy.get('#unsplash-selector-wormhole > div.absolute.top-8.right-8.bottom-8.left-8.br4.overflow-hidden.bg-white.z-9999 > div.flex.flex-column.h-100 > div > div > section > div:nth-child(1) > a:nth-child(1) > div > div > div.gh-unsplash-photo-footer > a');
+    }
+
     get confirmPublishBtn() {
         return cy.get('[data-test-button="confirm-publish"]');
     }
@@ -19,9 +27,28 @@ class PagesPage {
         return cy.get('div.kg-prose').first();
     }
 
+    get pageHeader() {
+        return cy.get('textarea[placeholder="Page title"]');
+    }
+
     fillPageDescription(description) {
         cy.wait(1000);
         this.pageDescription.type(description);
+    }
+
+    fillPageHeader(header) {
+        cy.wait(1000);
+        this.pageHeader.type(header);
+    }
+
+    addImageBtn_FirstPic_Click() {
+        cy.wait(1000);
+        cy.get('div.gh-unsplash-photo-footer').first().scrollIntoView().trigger('mouseover');
+        this.addImageBtn_FirstPic.click();
+    }
+
+    addImgBtn_Click() {
+        this.addImageBtn.click();
     }
 
     newPageBtn_Click() {
@@ -54,6 +81,10 @@ class PagesPage {
 
     isModalDescriptionCorrect(description) {
         return cy.get('[data-test-complete-bookmark=""] .modal-body .post-excerpt').should('contain', description);
+    }
+
+    isModalHeaderCorrect(header) {
+        return cy.get('h2').should('contain', header);
     }
 
     navigateToPagesPage() {

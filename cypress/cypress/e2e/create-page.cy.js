@@ -15,13 +15,23 @@ describe("Create Page", () => {
 
     it('should create a new page successfully with a random description', () => {
         const randomPageDescription = faker.lorem.paragraph();
+        const randomPageTitle = faker.lorem.sentence({min: 3, max: 5});
 
         // When
         // Clicks on new page
         pagesPage.newPageBtn_Click();
 
+        // Fill in the page with a randon title
+        pagesPage.fillPageHeader(randomPageTitle);
+
         // Fill in the page with random description
         pagesPage.fillPageDescription(randomPageDescription)
+
+        // Add a random image 1st step
+        pagesPage.addImgBtn_Click();
+
+        // A a random img 2nd step
+        pagesPage.addImageBtn_FirstPic_Click();
 
         // Publish intent page
         pagesPage.publishButton_Click();
@@ -37,7 +47,7 @@ describe("Create Page", () => {
         pagesPage.isPublishFlowComplete();
 
         // Verify the modal header text
-        pagesPage.isModalHeaderCorrect_Untitled();
+        pagesPage.isModalHeaderCorrect(randomPageTitle);
 
         // Verify the post title and excerpt
         pagesPage.isModalDescriptionCorrect(randomPageDescription);

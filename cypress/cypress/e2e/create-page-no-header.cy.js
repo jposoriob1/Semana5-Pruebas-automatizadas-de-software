@@ -2,7 +2,7 @@ import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
 
-describe("Create Empty Page", () => {
+describe("Create Page With Only Description", () => {
 
     beforeEach(() => {
         // Given the User navigates to the login page
@@ -20,8 +20,26 @@ describe("Create Empty Page", () => {
         // Clicks on new page
         pagesPage.newPageBtn_Click();
 
-        // Then
+        // Fill in the page with random description
+        pagesPage.fillPageDescription(randomPageDescription)
+
         // Publish intent page
-        pagesPage.publishButton_ShouldNotExist()
+        pagesPage.publishButton_Click();
+
+        // Continue Final Review
+        pagesPage.finalReviewButton_Click();
+
+        // Publish page now
+        pagesPage.confirmPublishButton_Click();
+
+        // Then
+        // Verify the modal appears
+        pagesPage.isPublishFlowComplete();
+
+        // Verify the modal header text
+        pagesPage.isModalHeaderCorrect_Untitled();
+
+        // Verify the post title and excerpt
+        pagesPage.isModalDescriptionCorrect(randomPageDescription);
     });
 });
