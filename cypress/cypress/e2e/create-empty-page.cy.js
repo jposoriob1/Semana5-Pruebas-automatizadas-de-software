@@ -13,7 +13,7 @@ describe("Create Empty Page", () => {
         GivenSteps.giveNavigateToPagesPage();
     });
 
-    it('should create a new page successfully with a random description', () => {
+    it('E20 - should create a new page successfully with a random description', () => {
         const randomPageDescription = faker.lorem.paragraph();
 
         // When

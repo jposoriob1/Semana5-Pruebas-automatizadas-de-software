@@ -16,7 +16,7 @@ describe("Edit page title and description", () => {
 
     });
 
-    it('should edit a page', () => {
+    it('E17 - should edit a page', () => {
         const randomPageDescription = faker.lorem.paragraph();
         const randomPageTitle = faker.lorem.sentence({min: 3, max: 5});
         // When
