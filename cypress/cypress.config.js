@@ -7,8 +7,8 @@ module.exports = defineConfig({
     },
   },
   env: {
-    'username': 'jaimea111@gmail.com',
-    'password': 'Warframe2024.',
+    'username': 'Carlitos.Bayona@playboy.com',
+    'password': 'miaumiauGRRRR',
     'url': 'http://localhost:3001/',
   }
 });
