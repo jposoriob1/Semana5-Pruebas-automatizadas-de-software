@@ -12,3 +12,4 @@ Feature: Edit Member
     And I wait for 2 seconds
     Then the user should see the message 'Invalid Email.'
     And the user should see the message 'Note is too long.'
+    And I wait for 5 seconds

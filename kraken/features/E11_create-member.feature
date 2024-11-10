@@ -11,5 +11,6 @@ Feature: Create member
     And the user clicks on the 'Save' button
     And I wait for 2 seconds
     Then the user should see the created member name "<NAME>"
+    And I wait for 5 seconds
 
  

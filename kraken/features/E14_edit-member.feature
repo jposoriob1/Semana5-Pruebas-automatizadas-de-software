@@ -8,3 +8,4 @@
     And the user clicks on the 'Save' button
     And I wait for 2 seconds
     Then the user should see the message 'Please enter an email.'
+    And I wait for 5 seconds
