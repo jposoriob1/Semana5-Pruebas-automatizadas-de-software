@@ -23,6 +23,15 @@ class DashboardPage {
         cy.wait(2000);
         this.tagLink.click();
     }
+
+    get postsLink(){
+        return cy.get('li>a[href="#/posts/"]');
+    }
+
+    clickPostsLink(){
+        cy.wait(2000);
+        this.postsLink.click();
+    }
 }
 
 export default new DashboardPage();
