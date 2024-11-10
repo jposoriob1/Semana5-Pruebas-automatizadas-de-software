@@ -1,6 +1,7 @@
 ﻿import LoginPage from "../pages/loginPage";
 import MemberPage from "../pages/memberPage";
 import DashboardPage from "../pages/dashboardPage";
+import PagesPage from "../pages/pagesPage";
 
 class GivenSteps {
     givenNavigateToLoginPage(){
@@ -10,8 +11,13 @@ class GivenSteps {
     givenNavigateToMembersPage(){
         DashboardPage.clickMembersLink();
     }
+
     givenLogin() {
-        LoginPage.login()
+        LoginPage.login();
+    }
+
+    giveNavigateToPagesPage(){
+        DashboardPage.clickPagesLink();
     }
     givenCreateNewMember(){
         MemberPage.clickNewMember()

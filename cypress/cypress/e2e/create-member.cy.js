@@ -1,4 +1,3 @@
-import { faker } from "@faker-js/faker";
 import loginPage from "./pages/loginPage";
 import memberPage from "./pages/memberPage";
 import dashboardPage from "./pages/dashboardPage";
@@ -15,7 +14,7 @@ describe("Create Members", () => {
     GivenSteps.givenLogin();
     // and navigates to the Members
     GivenSteps.givenNavigateToMembersPage();
-  })
+  });
   
   it("E11 - Create member with valid values", () => {
     // When the user clicks on New Member
