@@ -2,7 +2,7 @@ import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
 
-describe("Create Page", () => {
+describe("Create a complete valid Page", () => {
 
     beforeEach(() => {
         // Given the User navigates to the login page

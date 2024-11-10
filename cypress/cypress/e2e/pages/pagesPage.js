@@ -23,12 +23,20 @@ class PagesPage {
         return cy.get('[data-test-button="continue"]');
     }
 
+    get updateBtn() {
+        return cy.get('div.gh-posts-list-item-group').first();
+    }
+
     get pageDescription() {
         return cy.get('div.kg-prose').first();
     }
 
     get pageHeader() {
         return cy.get('textarea[placeholder="Page title"]');
+    }
+
+    get editPageBtn() {
+        return cy.get('#ember1194 > span');
     }
 
     fillPageDescription(description) {
@@ -47,6 +55,11 @@ class PagesPage {
         this.addImageBtn_FirstPic.click();
     }
 
+    updateBtn_Click() {
+        cy.wait(1000);
+        this.updateBtn.click();
+    }
+
     addImgBtn_Click() {
         this.addImageBtn.click();
     }
@@ -61,6 +74,10 @@ class PagesPage {
 
     publishButton_ShouldNotExist() {
         this.publishBtn.should('not.exist');
+    }
+
+    updateButton_Click() {
+        this.updateBtn.click();
     }
 
     finalReviewButton_Click() {
@@ -90,6 +107,20 @@ class PagesPage {
     navigateToPagesPage() {
         const url = Cypress.env("url");
         cy.visit(url+'/ghost/#/pages');
+    }
+
+    verifyContentExists(content) {
+        cy.contains(content).should('be.visible');
+    }
+
+    mockPageWithDescription(description) {
+        this.newPageBtn_Click();
+        this.fillPageHeader("Test");
+        this.fillPageDescription("Test")
+        this.publishButton_Click();
+        this.finalReviewButton_Click();
+        this.confirmPublishButton_Click();
+        cy.wait(1000);
     }
 }
 
