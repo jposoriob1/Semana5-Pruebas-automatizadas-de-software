@@ -4,7 +4,6 @@ class PagesPage {
     }
 
     get publishBtn() {
-        // return cy.get('');
         return cy.contains('button', 'Publish')
     }
 
@@ -31,6 +30,10 @@ class PagesPage {
 
     publishButton_Click() {
         this.publishBtn.click();
+    }
+
+    publishButton_ShouldNotExist() {
+        this.publishBtn.should('not.exist');
     }
 
     finalReviewButton_Click() {

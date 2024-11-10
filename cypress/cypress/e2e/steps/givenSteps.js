@@ -13,7 +13,7 @@ class GivenSteps {
     }
 
     givenLogin() {
-        LoginPage.login()
+        LoginPage.login();
     }
 
     giveNavigateToPagesPage(){
