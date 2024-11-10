@@ -1,6 +1,5 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const LoginPage = require('../../pages/loginPage');
-const DashboardPage = require('../../pages/dashboardPage');
 
 // Given
 Given('the user navigates to Ghost at {kraken-string}', async function (url) {
