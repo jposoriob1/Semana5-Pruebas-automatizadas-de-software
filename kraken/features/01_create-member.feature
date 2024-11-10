@@ -11,7 +11,7 @@ Feature: Create member
     And the user clicks on the 'Save' button
     And I wait for 2 seconds
     Then the user should see the created member name "<NAME>"
-    
+  
   @user2 @web
   Scenario: E12 - Create member with empty values
     Given the user navigates to Ghost at "<GHOST>"
@@ -31,3 +31,5 @@ Feature: Create member
     And the user clicks on the 'Save' button
     And I wait for 2 seconds
     Then the user should see the message 'Please enter an email.'
+
+ 
