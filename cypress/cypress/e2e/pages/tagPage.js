@@ -99,6 +99,7 @@ class TagPage{
     }
     deleteConfirmClick(){
         this.confirmDelete.click();
+        cy.wait(1000);
     }
     fillEditNameTag(){
         this.tagEditNameInput.clear().type("Edited tag");

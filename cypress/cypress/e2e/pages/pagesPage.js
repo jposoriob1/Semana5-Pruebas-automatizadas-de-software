@@ -35,8 +35,8 @@ class PagesPage {
         return cy.get('textarea[placeholder="Page title"]');
     }
 
-    get editPageBtn() {
-        return cy.get('#ember1194 > span');
+    get updateButton() {
+        return cy.get('button[data-test-button="publish-save"]').first();
     }
 
     fillPageDescription(description) {
@@ -77,7 +77,7 @@ class PagesPage {
     }
 
     updateButton_Click() {
-        this.updateBtn.click();
+        this.updateButton.click();
     }
 
     finalReviewButton_Click() {
