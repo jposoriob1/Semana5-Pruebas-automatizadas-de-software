@@ -13,7 +13,7 @@ describe("Create a complete valid Page", () => {
         GivenSteps.giveNavigateToPagesPage();
     });
 
-    it('should create a new page successfully with a random description', () => {
+    it('E16 - should create a new page successfully with a random description', () => {
         const randomPageDescription = faker.lorem.paragraph();
         const randomPageTitle = faker.lorem.sentence({min: 3, max: 5});
 

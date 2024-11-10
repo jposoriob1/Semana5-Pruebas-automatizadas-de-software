@@ -8,7 +8,7 @@ import WhenSteps from "./steps/whenSteps";
 import whenSteps from "./steps/whenSteps";
 
 
-describe("Create Tags", () => {
+describe("Edit Tags", () => {
 
   beforeEach(() => {
     // Given the User navigates to the login page
