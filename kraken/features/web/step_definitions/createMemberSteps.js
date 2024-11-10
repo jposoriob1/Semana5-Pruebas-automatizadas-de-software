@@ -1,6 +1,8 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const DashboardPage = require('../../pages/dashboardPage');
 const MembersPage = require('../../pages/membersPage');
+const assert = require('assert');
+
 // Given
 
 Given('the user navigates to the members page', async function () {
@@ -29,6 +31,20 @@ When('the user clicks on the {string} button', async function (button) {
     await this.driver.$(`button=${button}`).click();
 });
 
-Then('the user should see the created member ', async function (message) {
-    await this.driver.$(`p=${message}`).waitForExist();
+// Then
+
+Then('the user should see the created member name {kraken-string}', async function (name) {
+   const renderedName = await this.driver.$(`h3=${name}`).getText();
+   return assert.equal(renderedName, name);
+});
+
+Then('the user should see the created member email {kraken-string}', async function (name) {
+    const renderedEmail = await this.driver.$(`a=${name}`).getText();
+    return assert.equal(renderedEmail, name);
+ });
+ 
+
+Then('the user should see the message {string}', async function (emailError) {
+    const renderedEmail = await this.driver.$(`p.response=${emailError}`).getText();
+    return assert.equal(renderedEmail, emailError);
 });
