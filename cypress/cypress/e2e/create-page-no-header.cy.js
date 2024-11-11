@@ -38,7 +38,7 @@ describe("Pages - Create Page With Only Description", () => {
 
         // Publish page now
         // pagesPage.confirmPublishButton_Click();
-        WhenSteps.WhenClickPublishButton();
+        WhenSteps.WhenClickConfirmPublishButton();
 
         // Then
         // Verify the modal appears
@@ -47,7 +47,7 @@ describe("Pages - Create Page With Only Description", () => {
 
         // Verify the modal header text
         // pagesPage.isModalHeaderCorrect_Untitled();
-        ThenSteps.thenIsModalHeaderCorrect();
+        ThenSteps.thenIsModalHeaderCorrect_Untitled()
 
         // Verify the post title and excerpt
         // pagesPage.isModalDescriptionCorrect(randomPageDescription);

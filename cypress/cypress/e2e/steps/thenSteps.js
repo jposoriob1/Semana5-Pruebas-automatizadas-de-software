@@ -50,6 +50,10 @@ class ThenSteps {
     thenPublishButton_ShouldNotExist(){
         pagesPage.publishButton_ShouldNotExist();
     }
+
+    thenIsModalHeaderCorrect_Untitled(){
+        pagesPage.isModalHeaderCorrect_Untitled();
+    }
 }
 
 export default new ThenSteps();
