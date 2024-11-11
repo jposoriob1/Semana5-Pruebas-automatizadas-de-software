@@ -5,9 +5,26 @@ class PagesPage {
     }
 
     async fillContent(context, content) {
-        const contentField = await context.driver.$('div[data-placeholder="Begin writing your page..."]');
-        await contentField.setValue(content);
+        await context.driver.$('div[class="kg-prose"]').setValue(content);
     }
+
+    async ClickPagePublishRightNow(ctx){
+        const newPostButton = await ctx.driver.$('[data-test-button="confirm-publish"]');
+        await newPostButton.waitForExist({ timeout: 500 });
+        await newPostButton.click()
+    }
+
+    async ClickPageBtnContinuePublish(ctx){
+        const newPostButton = await ctx.driver.$('[data-test-button="continue"]');
+        await newPostButton.waitForExist({ timeout: 500 });
+        await newPostButton.click()
+    }
+
+    async ClickPageBtnEdit(ctx){
+        const editButton = await ctx.driver.$('span[title="Go to Editor"]');
+        await editButton.click();
+    }
+
 
     async addImage(context) {
         const addImageButton = await context.driver.$('button[aria-label="Add image"]');
@@ -22,8 +39,7 @@ class PagesPage {
     }
 
     async updateContent(context, newContent) {
-        const contentField = await context.driver.$('div[data-placeholder="Begin writing your page..."]');
-        await contentField.setValue(newContent);
+        await context.driver.$('div[class="kg-prose"]').setValue(newContent);
     }
 
 }

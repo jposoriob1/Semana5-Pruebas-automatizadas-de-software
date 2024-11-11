@@ -9,3 +9,4 @@ Scenario: E5_create empty post
   When the user cliks on the new post
   And I wait for 2 seconds
   Then the button should not be visible
+  And I wait for 2 seconds

@@ -16,15 +16,19 @@ When('the user updates the content to {kraken-string}', async function (newConte
     await PagesPage.updateContent(this, newContent);
 });
 
+When('the user clicks Go to Editor', async function () {
+    await PagesPage.ClickPageBtnEdit(this);
+});
+
 
 
 // Then
 Then('the user should see the updated page title {kraken-string}', async function (newTitle) {
-    const renderedTitle = await this.driver.$(`h1=${newTitle}`).getText();
+    const renderedTitle = await this.driver.$(`textarea`).getValue();
     return assert.equal(renderedTitle, newTitle);
 });
 
 Then('the user should see the updated page content {kraken-string}', async function (newContent) {
-    const renderedContent = await this.driver.$(`div=${newContent}`).getText();
+    const renderedContent = await this.driver.$(`span=${newContent}`).getText();
     return assert.equal(renderedContent, newContent);
 });

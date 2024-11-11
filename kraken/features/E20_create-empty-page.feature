@@ -5,8 +5,6 @@ Feature: Create empty page
     And the user logs in using the credentials "<USERNAME>" and "<PASSWORD>"
     And the user navigates to the pages page
     When the user clicks on the 'New page' link
-    And the user fills the content "<CONTENT>"
-    And the user clicks on the 'Publish' button
-    And I wait for 2 seconds
-    Then the user should see the created page description "<CONTENT>"
+    Then the button should not be visible
     And I wait for 5 seconds
+

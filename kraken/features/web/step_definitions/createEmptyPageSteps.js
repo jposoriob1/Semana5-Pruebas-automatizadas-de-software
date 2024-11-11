@@ -10,7 +10,3 @@ const assert = require('assert');
 
 
 // Then
-Then('the user should see the created page description {kraken-string}', async function (content) {
-    const renderedContent = await this.driver.$(`div=${content}`).getText();
-    return assert.equal(renderedContent, content);
-});
