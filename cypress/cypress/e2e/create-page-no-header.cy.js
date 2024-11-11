@@ -1,6 +1,9 @@
 import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
+import WhenSteps from "./steps/whenSteps";
+import ThenSteps from "./steps/thenSteps";
+import thenSteps from "./steps/thenSteps";
 
 describe("Pages - Create Page With Only Description", () => {
 
@@ -18,28 +21,36 @@ describe("Pages - Create Page With Only Description", () => {
 
         // When
         // Clicks on new page
-        pagesPage.newPageBtn_Click();
+        // pagesPage.newPageBtn_Click();
+        WhenSteps.WhenNewPageBtn_Click();
 
         // Fill in the page with random description
-        pagesPage.fillPageDescription(randomPageDescription)
+        // pagesPage.fillPageDescription(randomPageDescription)
+        WhenSteps.WhenFillPageDescription(randomPageDescription);
 
         // Publish intent page
-        pagesPage.publishButton_Click();
+        // pagesPage.publishButton_Click();
+        WhenSteps.WhenClickPublishButton();
 
         // Continue Final Review
-        pagesPage.finalReviewButton_Click();
+        // pagesPage.finalReviewButton_Click();
+        WhenSteps.WhenClickFinalReviewButton()
 
         // Publish page now
-        pagesPage.confirmPublishButton_Click();
+        // pagesPage.confirmPublishButton_Click();
+        WhenSteps.WhenClickPublishButton();
 
         // Then
         // Verify the modal appears
-        pagesPage.isPublishFlowComplete();
+        // pagesPage.isPublishFlowComplete();
+        ThenSteps.thenIsPublishFlowComplete();
 
         // Verify the modal header text
-        pagesPage.isModalHeaderCorrect_Untitled();
+        // pagesPage.isModalHeaderCorrect_Untitled();
+        ThenSteps.thenIsModalHeaderCorrect();
 
         // Verify the post title and excerpt
-        pagesPage.isModalDescriptionCorrect(randomPageDescription);
+        // pagesPage.isModalDescriptionCorrect(randomPageDescription);
+        ThenSteps.thenIsModalDescriptionCorrect(randomPageDescription);
     });
 });

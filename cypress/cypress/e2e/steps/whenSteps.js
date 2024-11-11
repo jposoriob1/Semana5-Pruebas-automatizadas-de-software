@@ -3,6 +3,7 @@ import MemberPage from "../pages/memberPage";
 import tagPage from "../pages/tagPage";
 import TagPage from "../pages/tagPage";
 import postPage from "../pages/postPage";
+import pagesPage from "../pages/pagesPage";
 
 class WhenSteps {
     whenClicksNewMember(){
@@ -152,6 +153,48 @@ class WhenSteps {
     
     whenClickFirstImage(){
         postPage.addImageClick()
+    }
+
+    //---------------------------pages-----------------------------------------------------
+
+    WhenNewPageBtn_Click() {
+        pagesPage.newPageBtn_Click();
+    }
+
+    WhenFillPageHeader(randomPageTitle) {
+        pagesPage.fillPageHeader(randomPageTitle);
+    }
+
+    WhenFillPageDescription(randomPageDescription){
+        pagesPage.fillPageDescription(randomPageDescription)
+    }
+
+    WhenClickAddImgBtn(){
+        pagesPage.addImgBtn_Click()
+    }
+
+    WhenClickAddImageBtn_FirstPic(){
+        pagesPage.addImageBtn_FirstPic_Click()
+    }
+
+    WhenClickPublishButton(){
+        pagesPage.publishButton_Click()
+    }
+
+    WhenClickFinalReviewButton(){
+        pagesPage.finalReviewButton_Click()
+    }
+
+    WhenClickConfirmPublishButton(){
+        pagesPage.confirmPublishButton_Click();
+    }
+
+    WhenClickUpdateBtn() {
+        pagesPage.updateBtn_Click();
+    }
+
+    WhenClickUpdateButton() {
+        pagesPage.updateButton_Click();
     }
 }
 

@@ -1,6 +1,8 @@
 import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
+import WhenSteps from "./steps/whenSteps";
+import ThenSteps from "./steps/thenSteps";
 
 describe("Pages - Create a complete valid Page", () => {
 
@@ -19,37 +21,49 @@ describe("Pages - Create a complete valid Page", () => {
 
         // When
         // Clicks on new page
-        pagesPage.newPageBtn_Click();
+        // pagesPage.newPageBtn_Click();
+        WhenSteps.WhenNewPageBtn_Click();
 
         // Fill in the page with a randon title
-        pagesPage.fillPageHeader(randomPageTitle);
+        // pagesPage.fillPageHeader(randomPageTitle);
+        WhenSteps.WhenFillPageHeader(randomPageTitle);
 
         // Fill in the page with random description
-        pagesPage.fillPageDescription(randomPageDescription)
+        // pagesPage.fillPageDescription(randomPageDescription);
+        WhenSteps.WhenFillPageDescription(randomPageDescription);
 
         // Add a random image 1st step
-        pagesPage.addImgBtn_Click();
+        // pagesPage.addImgBtn_Click();
+        WhenSteps.WhenClickAddImgBtn();
 
         // A a random img 2nd step
-        pagesPage.addImageBtn_FirstPic_Click();
+        // pagesPage.addImageBtn_FirstPic_Click();
+        WhenSteps.WhenClickAddImageBtn_FirstPic()
 
         // Publish intent page
-        pagesPage.publishButton_Click();
+        // pagesPage.publishButton_Click();
+        WhenSteps.WhenClickPublishButton();
 
         // Continue Final Review
-        pagesPage.finalReviewButton_Click();
+        // pagesPage.finalReviewButton_Click();
+        WhenSteps.WhenClickFinalReviewButton();
+
 
         // Publish page now
-        pagesPage.confirmPublishButton_Click();
+        // pagesPage.confirmPublishButton_Click();
+        WhenSteps.WhenClickConfirmPublishButton();
 
         // Then
         // Verify the modal appears
-        pagesPage.isPublishFlowComplete();
+        // pagesPage.isPublishFlowComplete();
+        ThenSteps.thenIsPublishFlowComplete();
 
         // Verify the modal header text
-        pagesPage.isModalHeaderCorrect(randomPageTitle);
+        // pagesPage.isModalHeaderCorrect(randomPageTitle);
+        ThenSteps.thenIsModalHeaderCorrect(randomPageTitle);
 
         // Verify the post title and excerpt
-        pagesPage.isModalDescriptionCorrect(randomPageDescription);
+        // pagesPage.isModalDescriptionCorrect(randomPageDescription);
+        ThenSteps.thenIsModalDescriptionCorrect(randomPageDescription);
     });
 });

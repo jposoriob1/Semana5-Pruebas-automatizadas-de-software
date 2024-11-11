@@ -1,6 +1,9 @@
 import GivenSteps from "./steps/givenSteps";
 import pagesPage from "./pages/pagesPage";
 import { faker } from "@faker-js/faker";
+import WhenSteps from "./steps/whenSteps";
+import thenSteps from "./steps/thenSteps";
+import ThenSteps from "./steps/thenSteps";
 
 describe("Pages - Create Empty Page", () => {
 
@@ -18,10 +21,12 @@ describe("Pages - Create Empty Page", () => {
 
         // When
         // Clicks on new page
-        pagesPage.newPageBtn_Click();
+        // pagesPage.newPageBtn_Click();
+        WhenSteps.WhenNewPageBtn_Click();
 
         // Then
         // Publish intent page
-        pagesPage.publishButton_ShouldNotExist()
+        // pagesPage.publishButton_ShouldNotExist();
+        ThenSteps.thenPublishButton_ShouldNotExist();
     });
 });
