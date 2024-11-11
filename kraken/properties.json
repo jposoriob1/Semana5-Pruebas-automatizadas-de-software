@@ -1,7 +1,7 @@
 {
     "GHOST": "http://localhost:3001/ghost/#/signin",
-    "USERNAME": "carlosdanielbayo@gmail.com",
-    "PASSWORD": "miau1234567890",
+    "USERNAME": "test@test.com",
+    "PASSWORD": "Semeolvido123",
     "NAME": "Janelle Schinner",
     "NAME2": "Jhon Doe",
     "EMAIL": "Schinner23@hotmail.com",
@@ -9,5 +9,8 @@
     "EMAIL3": "jhondoe@gmail.com",
     "NOTE":"MJOXUpllFLzVSUKZQDMvWWuBJfTSbBWUuTbDFZClAixybQudqBvUyccmaIGpkCQEhQPKTORiDdNlkxQbzhUwBUZfAXcAilgflmeY",
     "NOTE2":"MJOXUpllFLzVSUKZQDMvWWuBJfTSbBWUuTbDFZClAixybQudqBvUyccmaIGpkCQEhQPKTORiDdNlkxQbzhUwBUZfAXcAilgflmeYMJOXUpllFLzVSUKZQDMvWWuBJfTSbBWUuTbDFZClAixybQudqBvUyccmaIGpkCQEhQPKTORiDdNlkxQbzhUwBUZfAXcAilgflmeYMJOXUpllFLzVSUKZQDMvWWuBJfTSbBWUuTbDFZClAixybQudqBvUyccmaIGpkCQEhQPKTORiDdNlkxQbzhUwBUZfAXcAilgflmeYMJOXUpllFLzVSUKZQDMvWWuBJfTSbBWUuTbDFZClAixybQudqBvUyccmaIGpkCQEhQPKTORiDdNlkxQbzhUwBUZfAXcAilgflmeYMJOXUpllFLzVSUKZQDMvWWuBJfTSbBWUuTbDFZClAixybQudqBvUyccmaIGpkCQEhQPKTORiDdNlkxQbzhUwBUZfAXcAilgflmeY123456",
-    "NOTE3": "loremp ipsum"
+    "NOTE3": "loremp ipsum",
+    "TAGTEST": "TAG1",
+    "TAGDESCRIPTION": "Tag description OK"
+
 }
