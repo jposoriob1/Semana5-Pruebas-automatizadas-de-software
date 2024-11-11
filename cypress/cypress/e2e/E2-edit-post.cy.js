@@ -18,13 +18,11 @@ describe("edit - post", () => {
       GivenSteps.givenLogin();
       // and navigates to the Posts
       GivenSteps.givenNavigateToPostsPage();
-
-      GivenSteps.givenCreatePost();
-
     })
     
     it("E2- Edit Post ", () => {
-     
+      createPost();
+      whenSteps.whenClickBg();
       whenSteps.whenClickListPost();
       whenSteps.whenClicksPostTitle();
       whenSteps.whenEditPostTitle();
@@ -38,3 +36,31 @@ describe("edit - post", () => {
   
 
   });
+
+
+  export function createPost() {
+    // When the user clicks on "New Post" to start creating a new post
+    WhenSteps.whenClicksNewPost();
+  
+    // When the user clicks on the post content area to focus on it
+    WhenSteps.whenClicksPostContent();
+    // When the user clicks on the post title field to focus on it
+    whenSteps.whenClicksPostTitle();
+  
+    // When the user inputs a title into the post title field
+    WhenSteps.whenInputPostTitle();
+    // When the user inputs content into the post content field
+    whenSteps.whenInputPostContent();
+  
+    // When the user clicks the "Publish" button to initiate the publishing flow
+    whenSteps.whenClickPublishPost();
+  
+    // When the user clicks "Continue" in the publishing flow
+    WhenSteps.whenClickContinuePublish();
+  
+    // When the user clicks "Publish Right Now" to confirm the publication
+    whenSteps.whenclickPostPublishRightNow();
+  
+    // Then, verify that the post has been published successfully
+    thenSteps.thenVerifyPost();
+  }

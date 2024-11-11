@@ -2,7 +2,6 @@
 import MemberPage from "../pages/memberPage";
 import DashboardPage from "../pages/dashboardPage";
 import PagesPage from "../pages/pagesPage";
-import { createPost } from "../E1-E3-E4-create-post.cy";
 
 class GivenSteps {
     givenNavigateToLoginPage(){
@@ -30,10 +29,6 @@ class GivenSteps {
     }
     givenNavigateToTagPage(){
         DashboardPage.clickTagLink();
-    }
-
-    givenCreatePost(){
-        createPost();
     }
 
     givenNavigateToPostsPage(){

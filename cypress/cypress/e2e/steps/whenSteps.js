@@ -155,6 +155,10 @@ class WhenSteps {
         postPage.addImageClick()
     }
 
+    whenClickBg(){
+        postPage.clickBGModal()
+    }
+
     //---------------------------pages-----------------------------------------------------
 
     WhenNewPageBtn_Click() {

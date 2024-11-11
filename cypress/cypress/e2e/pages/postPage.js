@@ -52,6 +52,10 @@ class postPage {
         return cy.get('#unsplash-selector-wormhole > div.absolute.top-8.right-8.bottom-8.left-8.br4.overflow-hidden.bg-white.z-9999 > div.flex.flex-column.h-100 > div > div > section > div:nth-child(1) > a:nth-child(1) > div > div > div.gh-unsplash-photo-footer > a');
     }
 
+    get BgModal(){
+        return cy.get('div.epm-modal-container background-blur');
+    }
+
     
     clickNewPost() {
         cy.wait(1000);
@@ -61,6 +65,11 @@ class postPage {
     clickPostTitle() {
         cy.wait(1000);
         this.postTitleInput.click();
+    }
+
+    clickBGModal(){
+        cy.wait(1000);
+        cy.get('button.close').click()
     }
 
     clickPostContent() {
