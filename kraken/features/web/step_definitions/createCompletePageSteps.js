@@ -22,6 +22,6 @@ When('the user adds an image', async function () {
 // Then
 
 Then('the user should see the created page description {kraken-string}', async function (content) {
-    const renderedContent = await this.driver.$(`div=${content}`).getText();
+    const renderedContent = await this.driver.$(`p=${content}`).getText();
     return assert.equal(renderedContent, content);
 });

@@ -9,5 +9,7 @@ Feature: Create page
     And the user fills the content "<CONTENT>"
     And the user clicks on the 'Publish' button
     And I wait for 2 seconds
+    And The user clicks on the button continue publishing Page
+    And User clicks on the publish now button on Page
     Then the user should see the created page title "<TITLE>"
     And I wait for 5 seconds

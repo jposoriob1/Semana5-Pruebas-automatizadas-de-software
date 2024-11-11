@@ -12,11 +12,17 @@ When('the user fills the title {kraken-string}', async function (title) {
     await PagesPage.fillTitle(this, title);
 });
 
+When("User clicks on the publish now button on Page", async function () {
+    await PagesPage.ClickPagePublishRightNow(this);
+});
 
 
+When("The user clicks on the button continue publishing Page", async function () {
+    await PagesPage.ClickPageBtnContinuePublish(this);
+});
 
 // Then
 Then('the user should see the created page title {kraken-string}', async function (title) {
-    const renderedTitle = await this.driver.$(`h1=${title}`).getText();
+    const renderedTitle = await this.driver.$(`h2=${title}`).getText();
     return assert.equal(renderedTitle, title);
 });

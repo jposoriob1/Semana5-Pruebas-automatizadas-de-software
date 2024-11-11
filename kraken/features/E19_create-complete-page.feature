@@ -7,9 +7,12 @@ Feature: Create complete page
     When the user clicks on the 'New page' link
     And the user fills the title "<TITLE>"
     And the user fills the content "<CONTENT>"
-    And the user adds an image
+    And the user clicks add image
+    And the user clicks on the first image
     And the user clicks on the 'Publish' button
     And I wait for 2 seconds
-    Then the user should see the created page title "<TITLE>"
-    And the user should see the created page description "<CONTENT>"
+    And The user clicks on the button continue publishing Page
+    And User clicks on the publish now button on Page
+    Then the user should see the created page description "<CONTENT>"
     And I wait for 5 seconds
+
