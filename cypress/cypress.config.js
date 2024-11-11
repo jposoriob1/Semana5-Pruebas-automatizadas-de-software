@@ -7,8 +7,8 @@ module.exports = defineConfig({
     },
   },
   env: {
-    'username': 'camis.069@gmail.com',
-    'password': 'OSO*994290',
+    'username': 'USURAIO@USUARIO.com',
+    'password': 'CONTRASEÑA123',
     'url': 'http://localhost:3001/',
   }
 });
