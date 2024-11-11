@@ -21,7 +21,7 @@ Carlos Bayona | c.bayona@uniandes.edu.co
 - Instalar node.
 - Instala Kraken en nuestro computador de forma global en terminal: **npm install kraken-node**
 - Instalar de forma global appium en terminal: npm install -g appium
-- Revisar que en el archivo **package.json** tenga el siguiente json:
+- Revisar que en el archivo **package.json** de kraken del repositorio tenga el siguiente json:
 
   {
   
@@ -72,7 +72,11 @@ Carlos Bayona | c.bayona@uniandes.edu.co
   }
 
 - En la terminal ir a la carpeta de ./cypress
-- Correr las pruebas: npx cypress open
+- Correr las pruebas: **npx cypress open**
 - Se abre la interfaz de de Cypress
 - Ir a pruebubas E2E
 - Correr las pruebas que se encuentran en la interfaz
+- Opcion se pudede correr desde la terminal con **npx cypress run**
+
+
+NOTA: Se suben los reportes de las pruebas al repositorio
